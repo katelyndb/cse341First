@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
-// define the home page route
+// responds with the home page route (when get request is made)
 router.get('/', (req, res) => {
     res.send('Nia Goodwill')
   })
-  // define the about route
+  // the about route
   router.get('/about', (req, res) => {
     res.send('About Nia Goodwill')
   })
