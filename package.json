@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/katelyndb/cse341First/issues"
   },
-  "homepage": "https://github.com/katelyndb/cse341First#readme"
+  "homepage": "https://github.com/katelyndb/cse341First#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
