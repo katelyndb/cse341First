@@ -1,3 +1,20 @@
+// Localhost
 http://localhost:3000
+
+http://localhost:3000/contacts
+
+http://localhost:3000/contacts/63fa72b49da4c3d428010576
+
+http://localhost:3000/contacts/63fa72b49da4c3d428010577
+
+http://localhost:3000/contacts/63fa72b49da4c3d428010578
+
+
+// Render
+
+https://katelyndb341.onrender.com/
+
+
+
 
 
