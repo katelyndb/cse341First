@@ -13,10 +13,11 @@ async function main() {
     try{
         await client.connect();
         await listDatabases(client);
+        await listContacts(client);
     } catch (e) {
         console.error(e);
     } finally {
-        await client.close();
+        //await client.close();
     }
     
 }
@@ -24,7 +25,7 @@ async function main() {
 main().catch(console.error);
 
 async function createListing(client, newListing) {
-   const result = await client.db("NAMEOFDATABASE").collection("NAMEOFCOLLECTION").insertOne(newListing);
+   const result = await client.db("cse341first").collection("contacts").insertOne(newListing);
    console.log(`New Listing created with the following id: ${result.insertedId}`);
 }
 
@@ -35,4 +36,8 @@ async function listDatabases(client) {
     databasesList.databases.forEach(db =>{
         console.log(`- ${db.name}`);
     })
+}
+
+async function listContacts(client) {
+    //const contactsList = await client.db("cse341first").collection("contacts").find().forEach(printjson);
 }

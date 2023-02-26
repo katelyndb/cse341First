@@ -1,6 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
+router.use('/contacts', require('./contacts'))
+
+module.exports = router;
+// First Lesson Stuff
+/*
+const express = require('express');
+const router = express.Router();
+
 // responds with the home page route (when get request is made)
 router.get('/', (req, res) => {
     res.send('Nia Goodwill')
@@ -16,3 +24,4 @@ router.get('/api/course/:id', (req,res) => {
 
 
   module.exports = router;
+  */

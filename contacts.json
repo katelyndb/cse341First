@@ -1,0 +1,24 @@
+[
+    {
+    "firstName": "Quinn",
+    "lastName": "Ulrich",
+    "email": "quinn@gmail.com",
+    "favoriteColor": "Blue",
+    "birthday": "October 23, 1997"
+    },
+    {
+    "firstName": "Corinne",
+    "lastName": "Blunck",
+    "email": "corinne@gmail.com",
+    "favoriteColor": "Pink",
+    "birthday": "January 15, 2004"
+    },
+    {
+    "firstName": "Nia",
+    "lastName": "Goodwill",
+    "email": "nia@gmail.com",
+    "favoriteColor": "Orange",
+    "birthday": "July 18, 2003"
+    }
+    
+]
