@@ -1,18 +1,28 @@
 // Localhost
-http://localhost:3000
+# Get Home of Site
+GET http://localhost:3000
 
-http://localhost:3000/contacts
+# Get all contact information
+GET http://localhost:3000/contacts
 
-http://localhost:3000/contacts/63fa72b49da4c3d428010576
+# Get individual contact info for Quinn
+GET http://localhost:3000/contacts/63fa72b49da4c3d428010576
 
-http://localhost:3000/contacts/63fa72b49da4c3d428010577
+# Get individual contact info for Corinne
+GET http://localhost:3000/contacts/63fa72b49da4c3d428010577
 
-http://localhost:3000/contacts/63fa72b49da4c3d428010578
+# Get individual contact info for Nia
+GET http://localhost:3000/contacts/63fa72b49da4c3d428010578
+
 
 
 // Render
-
+# Get Home site on Render
 https://katelyndb341.onrender.com/
+
+
+
+
 
 
 
