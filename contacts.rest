@@ -6,13 +6,45 @@ GET http://localhost:3000/contacts
 GET http://localhost:3000/contacts/63fa72b49da4c3d428010576
 ### Get individual contact info for Corinne
 GET http://localhost:3000/contacts/63fa72b49da4c3d428010577
-### Create PJ contact 
-GET http://localhost:3000/contacts/newContact/`{"firstName":"Kickthe","lastName":"PJ","email":"PJ@gmail.com","favoriteColor":"Yellow","birthday":"August 1, 1990"}`
-### Delete Katie contact
-GET http://localhost:3000/contacts/deletecontact/63ff8e6f2e7c564bd3bc2fcc
+### Creates new Katie contact 
+POST http://localhost:3000/contacts
+Content-type: application/json
+
+{
+    "firstName":"Katie","lastName":"Blunck","email":"katie@gmail.com","favoriteColor":"Green","birthday":"May 30, 2002"}
+### Updates Katie contact info
+PUT http://localhost:3000/contacts/6400066114fab75acf9e830d 
+Content-type: application/json
+
+{"firstName":"Katelynd","lastName":"Blunck","email":"katie@gmail.com","favoriteColor":"Purple","birthday":"May 30, 2002"}
+### DELETE Katie contact
+DELETE http://localhost:3000/contacts/63fa72b49da4c3d428010577 
+
+
 
 // Render
-### Get Home site on Render
+### Get contact information on Render
 GET https://katelyndb341.onrender.com/contacts
+### Get individual contact info for Quinn on Render
+GET http://localhost:3000/contacts/63fa72b49da4c3d428010576
+### Creates new Katie contact 
+POST http://localhost:3000/contacts
+Content-type: application/json
+
+{
+    "firstName":"Katie","lastName":"Blunck","email":"katie@gmail.com","favoriteColor":"Green","birthday":"May 30, 2002"}
+### Updates Katie contact info
+PUT http://localhost:3000/contacts/6400066114fab75acf9e830d 
+Content-type: application/json
+
+{"firstName":"Katelynd","lastName":"Blunck","email":"katie@gmail.com","favoriteColor":"Purple","birthday":"May 30, 2002"}
+### DELETE Katie contact
+DELETE http://localhost:3000/contacts/63fa72b49da4c3d428010577 
+
+
+
+
+
+
 
 

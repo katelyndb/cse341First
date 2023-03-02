@@ -7,12 +7,12 @@ router.get('/', contactsController.getAllData);
 // Gets a specific contact
 router.get('/:id', contactsController.getSingleData);
 // Creates a new contact
-router.get('/newContact/:contactData', contactsController.createContact);
+router.post('/', contactsController.createContact);
 // Creates multiple new Contacts
-router.get('/newContacts/:contactsData', contactsController.createMultipleContacts);
+router.post('/', contactsController.createMultipleContacts);
 // Updates the contact by the ID
-router.get('/updateContact/:id/:updatedContact', contactsController.updateContactById);
+router.put('/:id', contactsController.updateContactById);
 // Deletes the contact by the ID
-router.get('/deletecontact/:id', contactsController.deleteContactById);
+router.delete('/:id', contactsController.deleteContactById);
 
 module.exports = router;
