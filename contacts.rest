@@ -13,12 +13,12 @@ Content-type: application/json
 {
     "firstName":"Katie","lastName":"Blunck","email":"katie@gmail.com","favoriteColor":"Green","birthday":"May 30, 2002"}
 ### Updates Katie contact info
-PUT http://localhost:3000/contacts/6400066114fab75acf9e830d 
+PUT http://localhost:3000/contacts/64001a852465206b2e7ce432
 Content-type: application/json
 
 {"firstName":"Katelynd","lastName":"Blunck","email":"katie@gmail.com","favoriteColor":"Purple","birthday":"May 30, 2002"}
 ### DELETE Katie contact
-DELETE http://localhost:3000/contacts/63fa72b49da4c3d428010577 
+DELETE http://localhost:3000/contacts/64001a852465206b2e7ce432 
 
 
 
