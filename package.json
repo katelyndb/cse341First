@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "swagger": "node ./swagger.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,11 @@
     "mongo": "^0.1.0",
     "mongodb": "^5.1.0",
     "mongoose": "^7.0.0",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.2"
+  },
+  "devDependencies": {
+    "swagger-autogen": "^2.23.1"
   }
 }

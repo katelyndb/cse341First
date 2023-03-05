@@ -26,18 +26,18 @@ DELETE http://localhost:3000/contacts/64001a852465206b2e7ce432
 ### Get contact information on Render
 GET https://katelyndb341.onrender.com/contacts
 ### Get individual contact info for Quinn on Render
-GET http://localhost:3000/contacts/63fa72b49da4c3d428010576
+GET http://katelyndb341.onrender.com/contacts/63fa72b49da4c3d428010576
 ### Creates new Katie contact 
 POST http://localhost:3000/contacts
 Content-type: application/json
 
 {
-    "firstName":"Katie","lastName":"Blunck","email":"katie@gmail.com","favoriteColor":"Green","birthday":"May 30, 2002"}
+    "firstName":"Katie","lastName":"Blunck","email":"katie@gmail.com","favoriteColor":"Green","birthday":"May 30, 2002", "gender": "female", "hometown": "Rexburg"}
 ### Updates Katie contact info
 PUT http://localhost:3000/contacts/6400066114fab75acf9e830d 
 Content-type: application/json
 
-{"firstName":"Katelynd","lastName":"Blunck","email":"katie@gmail.com","favoriteColor":"Purple","birthday":"May 30, 2002"}
+{"firstName":"Katelynd","lastName":"Blunck","email":"katie@gmail.com","favoriteColor":"Purple","birthday":"May 30, 2002", "gender": "female", "hometown": "Lilburn"}
 ### DELETE Katie contact
 DELETE http://localhost:3000/contacts/63fa72b49da4c3d428010577 
 
