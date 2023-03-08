@@ -9,7 +9,7 @@ router.get('/:id', contactsController.getSingleData);
 // Creates a new contact
 router.post('/', contactsController.createContact);
 // Creates multiple new Contacts
-router.post('/', contactsController.createMultipleContacts);
+//router.post('/', contactsController.createMultipleContacts);
 // Updates the contact by the ID
 router.put('/:id', contactsController.updateContactById);
 // Deletes the contact by the ID
