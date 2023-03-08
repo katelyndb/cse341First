@@ -31,5 +31,8 @@
   },
   "devDependencies": {
     "swagger-autogen": "^2.23.1"
+  },
+  "engines": {
+    "node": ">=18 <15"
   }
 }
