@@ -3,7 +3,7 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAllData = async (req, res) => {
-  const result = await mongodb.getDb('cse341first').db('cse341first').collection('contacts').find();
+  const result = await mongodb.getDb().db('cse341first').collection('contacts').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
@@ -13,7 +13,7 @@ const getAllData = async (req, res) => {
 const getSingleData = async (req, res) => {
   // gets parameter
   const userId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb('cse341first').db('cse341first').collection('contacts').find({ _id: userId });
+  const result = await mongodb.getDb().db('cse341first').collection('contacts').find({ _id: userId });
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
@@ -29,7 +29,7 @@ const createContact = async (req, res) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   };
-  const result = await mongodb.getDb('cse341first').db('cse341first').collection('contacts').insertOne(contactData);
+  const result = await mongodb.getDb().db('cse341first').collection('contacts').insertOne(contactData);
   console.log(`New Contact created with the following Id: ${result.insertedId}`);
   if (result.acknowledged) {
     res.status(201).json(result);
@@ -46,7 +46,7 @@ const createMultipleContacts = async (req, res) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   };
-  const result = await mongodb.getDb('cse341first').db('cse341first').collection('contacts').insertMany(contactsData);
+  const result = await mongodb.getDb().db('cse341first').collection('contacts').insertMany(contactsData);
   console.log(` ${result.insertedCount} new contacts were created with the following ids: `);
   console.log(result.insertedIds)
   if (result.acknowledged) {
@@ -65,7 +65,7 @@ const updateContactById = async(req, res) => {
     birthday: req.body.birthday
   };
   const userId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb('cse341first').db('cse341first').collection('contacts').updateOne({ _id: userId },{ $set: updatedContact });
+  const result = await mongodb.getDb().db('cse341first').collection('contacts').updateOne({ _id: userId },{ $set: updatedContact });
   console.log(`${result.matchedCount} document(s) matched the query criteria`);
   console.log(`${result.modifiedCount} was/were updated`);
   if (result.modifiedCount > 0) {
@@ -78,7 +78,7 @@ const updateContactById = async(req, res) => {
 
 const deleteContactById = async(req, res) => {
   const userId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb('cse341first').db('cse341first').collection('contacts').deleteOne({ _id: userId }, true);
+  const result = await mongodb.getDb().db('cse341first').collection('contacts').deleteOne({ _id: userId }, true);
   console.log(`${result.matchedCount} document(s) matched the query criteria`);
   console.log(result);
   if (result.deletedCount > 0) {
